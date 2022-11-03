@@ -11,6 +11,9 @@ const PORT = 8080
 
 app.use(express.json())
 app.use(cors())
+app.get("/",(req,res)=>{
+    res.send({msg:"Welcome to my api"})
+})
 app.use("/signup",signupRouter)
 app.use("/login",loginRouter)
 app.use(authentication)
